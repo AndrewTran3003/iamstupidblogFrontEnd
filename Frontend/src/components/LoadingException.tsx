@@ -7,6 +7,7 @@ const LoadingException = (props: { status: string; }) =>{
     let pageContent:{};
 
     if (status === "loading") {
+      console.log("Loading");
       pageContent = <LoadingStatus />;
     } else if (status === "no-content") {
 

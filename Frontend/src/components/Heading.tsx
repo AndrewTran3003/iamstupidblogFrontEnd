@@ -11,7 +11,7 @@ const Heading = (params: { heading: string; description: string; }):any => {
 
   return (
     <>
-      <div id ="heading-frag">
+      <div className ="heading-frag">
         <NavBar />
         {summary}
       </div>

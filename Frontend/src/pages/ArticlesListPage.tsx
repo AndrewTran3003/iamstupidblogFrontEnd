@@ -45,7 +45,7 @@ const ArticlesListPage = () => {
     console.log(3.1);
 
     let fetchData: Promise<content> = fetch(
-      `http://localhost/wordpress/wp-json/wp/v2/articles/`
+      `http://localhost/wordpress/wp-json/wp/v2/articles?_fields[]=title&_fields[]=excerpt&_fields[]=author&_fields[]=id`
     )
       .then((response: any) => response.json())
       .then((json: [{}]) => {
@@ -53,8 +53,7 @@ const ArticlesListPage = () => {
         if (json.length > 0) {
           result.status = "loaded";
           result.content = MapData(json);
-        }
-        else{
+        } else {
           result.status = "no-data";
         }
 

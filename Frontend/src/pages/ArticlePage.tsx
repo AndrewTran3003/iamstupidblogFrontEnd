@@ -27,14 +27,14 @@ const ArticlePage = (response: response): any => {
   //const article = articleContent.find((article) => article.name === name);
 
   const [articleInfo, setArticleInfo] = useState({
-    status: "Loading",
+    status: "loading",
     title:  "",
     content:  "",
     excerpt: "",
   });
   useEffect(() => {
     let fetchData: Promise<articleInfo> = fetch(
-      `http://localhost/wordpress/wp-json/wp/v2/articles/${id}`
+      `http://localhost/wordpress/wp-json/wp/v2/articles/${id}?_fields[]=title&_fields[]=excerpt&_fields[]=author&_fields[]=id&_fields[]=content`
     )
       .then((response) => response.json())
       .then((json: any) => {
@@ -67,7 +67,7 @@ const ArticlePage = (response: response): any => {
   let pageDescription: string = "";
   if (articleInfo.status === "loaded") {
     pageContent = (
-      <div className="container" id="article-content">
+      <div className="article-content">
         <Article content={articleInfo.content}/>
       </div>
     );
