@@ -20,9 +20,7 @@ const NavBar = () => {
       <div className="container">
         <div className="navbar">
           <div className="logo">
-            <Link to="/">
-              I am Stupid Blog
-            </Link>
+            <Link to="/">I am Stupid Blog</Link>
           </div>
 
           <a
@@ -52,7 +50,11 @@ const NavBar = () => {
             </ul>
           </nav>
         </div>
-        <div className = {`${isHidden? "" : "overlay"} ${isClicked? "fade-in-overlay": "fade-out-overlay"}`}></div>
+        <div
+          className={`${isHidden ? "" : "overlay"} ${
+            isClicked ? "fade-in-overlay" : "fade-out-overlay"
+          }`}
+        ></div>
       </div>
     </div>
   );

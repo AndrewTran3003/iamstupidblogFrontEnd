@@ -1,7 +1,13 @@
 /*
   linear-gradient(180deg,#7525b9 27.33%,rgba(255,174,62,0) 93.12%)
 */
-
+@keyframes gooey-animation {
+  0% { background-position: 0 0; }
+  25% { background-position: 200% 0; }
+  50% { background-position: 150% 150%; }
+  75% { background-position: 175% 100%; }
+  100% { background-position: 0 0; }
+}
 @keyframes fade-in-overlay {
   from {
     visibility: hidden;
@@ -21,11 +27,10 @@
     visibility: visible;
     opacity: 1;
   }
-  
+
   to {
     visibility: hidden;
     opacity: 0;
-    
   }
 }
 @keyframes fade-in {
@@ -72,7 +77,8 @@
 
 //helper styles
 .fade-in-overlay {
-  animation: fade-in-overlay 200ms ease-in forwards;
+  animation: fade-in-overlay 200ms ease-in forwards,
+    gooey-animation 80s linear 500ms infinite;
 }
 .fade-out-overlay {
   animation: fade-out-overlay 700ms ease-in-out forwards;
@@ -112,7 +118,6 @@ body {
 header {
   height: 15em;
 }
-
 
 .btn {
   display: inline-block;
@@ -162,7 +167,6 @@ h3 {
   }
   &:hover {
     cursor: pointer;
-    
   }
 }
 
@@ -262,7 +266,6 @@ h3 {
         }
         .button-hamburger {
           grid-area: hamburger;
-
         }
         nav {
           grid-area: link;
@@ -317,18 +320,16 @@ h3 {
       right: 0px;
       bottom: 0px;
       left: 0px;
-      background-image: linear-gradient(
-        170deg,
-        rgba(107, 34, 169, 1),
-        rgba(117, 37, 185, 1) 20%,
-        rgba(34, 230, 185, 1) 70%,
-        rgba(22, 191, 152, 0.8)
-      );
+      background-size: 600% 600%;
+      background-image: radial-gradient(circle, rgba(35,184,102,1) 0%, rgba(27,130,160,1) 42%, rgba(32,99,187,1) 74%, rgba(137,32,184,1) 100%);
       overflow: hidden;
       opacity: 0.1;
     }
   }
 }
+
+//          background-image: linear-gradient(170deg, rgba(137,32,184,1) 13%, rgba(32,99,187,1) 48%, rgba(27,130,160,1) 79%, rgba(35,184,102,1) 100%);
+  
 
 @media only screen and (min-width: 800px) {
   .navbar-header {

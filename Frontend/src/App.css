@@ -1,6 +1,41 @@
 /*
   linear-gradient(180deg,#7525b9 27.33%,rgba(255,174,62,0) 93.12%)
 */
+@-webkit-keyframes gooey-animation {
+  0% {
+    background-position: 0 0;
+  }
+  25% {
+    background-position: 200% 0;
+  }
+  50% {
+    background-position: 150% 150%;
+  }
+  75% {
+    background-position: 175% 100%;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+@keyframes gooey-animation {
+  0% {
+    background-position: 0 0;
+  }
+  25% {
+    background-position: 200% 0;
+  }
+  50% {
+    background-position: 150% 150%;
+  }
+  75% {
+    background-position: 175% 100%;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
 @-webkit-keyframes fade-in-overlay {
   from {
     visibility: hidden;
@@ -15,6 +50,7 @@
     opacity: 1;
   }
 }
+
 @keyframes fade-in-overlay {
   from {
     visibility: hidden;
@@ -129,8 +165,8 @@
 }
 
 .fade-in-overlay {
-  -webkit-animation: fade-in-overlay 200ms ease-in forwards;
-          animation: fade-in-overlay 200ms ease-in forwards;
+  -webkit-animation: fade-in-overlay 200ms ease-in forwards, gooey-animation 80s linear 500ms infinite;
+          animation: fade-in-overlay 200ms ease-in forwards, gooey-animation 80s linear 500ms infinite;
 }
 
 .fade-out-overlay {
@@ -377,7 +413,8 @@ h3 {
     right: 0px;
     bottom: 0px;
     left: 0px;
-    background-image: linear-gradient(170deg, #6b22a9, #7525b9 20%, #22e6b9 70%, rgba(22, 191, 152, 0.8));
+    background-size: 600% 600%;
+    background-image: radial-gradient(circle, #23b866 0%, #1b82a0 42%, #2063bb 74%, #8920b8 100%);
     overflow: hidden;
     opacity: 0.1;
   }
