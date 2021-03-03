@@ -1,5 +1,23 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+This is a Headless CMS blog website I created to put my React knowledge into practice.
+
+The frontend is inspired by the design created by Design Course and Coder Coder. Huge thanks for those two channels for helping me with the frontend design.
+
+The backend is powered by Wordpress with the Wordpress API that sends the whole article or the list of articles to the frontend.
+
+It has four pages: Home, About,  Article list page that fetches the data from Wordpress to display, and an Article page to display the whole content of the article.
+
+Some parts of the articles have been added some special attributes so that they can be rendered properly. For example, there are a few code snippets in the article, which are unreadable if we just render it as normal paragraphs. By adding a few attributes and setting up some rules in React, those parts are highlighted properly and wrapped inside a text area that does not overflow the view.
+
+For the mobile view, there is an animated hamburger bar and an overlay menu that changes color overtime. The color changing animation is set to be happening slowly so that it doesn't hurt people's eyes when the view it.
+
+Here is the demo of the website running
+
+
+
+
+
 ## Available Scripts
 
 In the project directory, you can run:
