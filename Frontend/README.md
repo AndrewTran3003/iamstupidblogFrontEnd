@@ -22,7 +22,9 @@ Here is the demo video of the website running
 
 https://drive.google.com/file/d/1k-9lPyM5DYCe49JVcv2RVslLtjtdRFhv/view?usp=sharing
 
+UPDATE: 9/3/2021: Here is the live version of the website
 
+https://iamstupidblog-front-end-nextjs.vercel.app/
 
 ## Available Scripts
 
