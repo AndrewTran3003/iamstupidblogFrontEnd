@@ -26,6 +26,11 @@ UPDATE: 9/3/2021: Here is the live version of the website
 
 https://iamstupidblog-production.vercel.app/
 
+UPDATE: 12/3/2021: I have created a development version of this website. All the experimental features will be here
+
+https://iamstupidblog-dev.vercel.app/
+
+
 ## Available Scripts
 
 In the project directory, you can run:
