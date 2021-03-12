@@ -24,7 +24,7 @@ https://drive.google.com/file/d/1k-9lPyM5DYCe49JVcv2RVslLtjtdRFhv/view?usp=shari
 
 UPDATE: 9/3/2021: Here is the live version of the website
 
-https://iamstupidblog-front-end-nextjs.vercel.app/
+https://iamstupidblog-production.vercel.app/
 
 ## Available Scripts
 
